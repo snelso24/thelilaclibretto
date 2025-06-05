@@ -1,0 +1,29 @@
+title: The Lilac Libretto
+description: An enchanted haven for book recommendations, cozy playlists, and sweet recipes
+baseurl: ""
+url: "https://thelilaclibretto.github.io"
+
+collections:
+  baking:
+    output: true
+  reading:
+    output: true
+  music:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "baking"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "reading"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "music"
+    values:
+      layout: default
