@@ -15,6 +15,6 @@ layout: default
   {% include card.html items=sorted_reading limit=1 %}
 
   <h2>🎵 What I'm Listening To</h2>
-  {% assign sorted_listening = site.listening | sort: "date" | reverse %}
-  {% include card.html items=sorted_listening limit=1 %}
+  {% assign sorted_music = site.music | sort: "date" | reverse %}
+  {% include card.html items=sorted_music limit=1 %}
 </div>
