@@ -1,36 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whimsical Haven</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Whimsical Haven</h1>
-    <p>Your cozy corner for sweet bakes, magical reads, and musical daydreams</p>
-  </header>
+---
+layout: default
+---
 
-  <main class="cards">
-    <a class="card baking" href="#baking">
-      <h2>🍰 Baking Recipes</h2>
-      <p>From cloud cookies to pastel cupcakes — all the whimsy in one place.</p>
-    </a>
+<h1>Welcome to Whimsical Haven 🌸</h1>
+<p>Your cozy corner for sweet bakes, magical reads, and musical daydreams.</p>
 
-    <a class="card books" href="#books">
-      <h2>📚 Cute Book Picks</h2>
-      <p>Wholesome, sweet, and full of heart — perfect for rainy days.</p>
-    </a>
+<div class="cards">
+  <h2>🍰 What I'm Baking</h2>
+  {% assign sorted_baking = site.baking | sort: "date" | reverse %}
+  {% include card.html items=sorted_baking limit=1 %}
 
-    <a class="card music" href="#music">
-      <h2>🎵 Dreamy Music</h2>
-      <p>Playlists to twirl to while baking or reading under a blanket.</p>
-    </a>
-  </main>
+  <h2>📚 What I'm Reading</h2>
+  {% assign sorted_reading = site.reading | sort: "date" | reverse %}
+  {% include card.html items=sorted_reading limit=1 %}
 
-  <footer>
-    <p>Made with 💗 in pastel dreams · @YourUsername</p>
-  </footer>
-</body>
-</html>
+  <h2>🎵 What I'm Listening To</h2>
+  {% assign sorted_listening = site.listening | sort: "date" | reverse %}
+  {% include card.html items=sorted_listening limit=1 %}
+</div>
