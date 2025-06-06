@@ -1,16 +1,12 @@
-{% assign count = 0 %}
-{% for item in include.items %}
-  {% if include.limit and count == include.limit %}
-    {% break %}
-  {% endif %}
-  <div class="card">
-    <img src="{{ item.image }}" alt="{{ item.title }}">
-    <h3>{{ item.title }}</h3>
-    <p>{{ item.content | markdownify }}</p>
-    {% if item.link %}
-    <a href="{{ item.link }}" target="_blank">View More</a>
-    {% endif %}
-  </div>
-  {% assign count = count | plus: 1 %}
-{% endfor %}
-
+<div class="card-grid">
+  {% for item in items limit: limit %}
+    <div class="card card-{{ forloop.index }}">
+      <img src="{{ item.image }}" alt="{{ item.title }}">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.excerpt | strip_html | truncate: 100 }}</p>
+      {% if item.link %}
+        <a href="{{ item.link }}" class="button" target="_blank">Explore</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
