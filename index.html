@@ -6,15 +6,16 @@ layout: default
 <p>Your cozy corner for sweet bakes, magical reads, and musical daydreams.</p>
 
 <div class="cards">
-  <h2>🍰 What I'm Baking</h2>
-  {% assign sorted_baking = site.baking | sort: "date" | reverse %}
-  {% include card.html items=sorted_baking limit=1 %}
+  <h2>What I'm Baking</h2>
+{% assign sorted_baking = site.baking | sort: "date" | reverse %}
+{% include card.html items=sorted_baking limit=1 %}
 
-  <h2>📚 What I'm Reading</h2>
-  {% assign sorted_reading = site.reading | sort: "date" | reverse %}
-  {% include card.html items=sorted_reading limit=1 %}
+<h2>What I'm Reading</h2>
+{% assign sorted_reading = site.reading | sort: "date" | reverse %}
+{% include card.html items=sorted_reading limit=1 %}
 
-  <h2>🎵 What I'm Listening To</h2>
-  {% assign sorted_music = site.music | sort: "date" | reverse %}
-  {% include card.html items=sorted_music limit=1 %}
+<h2>What I'm Listening To</h2>
+{% assign sorted_listening = site.listening | sort: "date" | reverse %}
+{% include card.html items=sorted_listening limit=1 %}
+
 </div>
