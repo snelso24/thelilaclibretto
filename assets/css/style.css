@@ -1,41 +1,67 @@
-body {
-  font-family: 'Georgia', serif;
-  background: #fff0f6;
-  color: #5e548e;
-  margin: 0;
-  padding: 2rem;
-}
-
-h1, h2, h3 {
-  color: #9d4edd;
-  text-align: center;
-}
-
-.cards {
-  display: grid;
-  gap: 2rem;
-  max-width: 900px;
-  margin: auto;
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
 }
 
 .card {
-  background: #fce4ec;
+  flex: 1 1 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 10px #e0bbe4;
+  color: #444;
   text-align: center;
+  background-color: white;
+  transition: transform 0.3s ease;
 }
 
 .card img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 1rem;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-.card a {
-  color: #6a1b9a;
+.card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem;
+}
+
+.card a.button {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background-color: #fff;
+  border: 2px solid #444;
+  border-radius: 6px;
+  color: #444;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.card a.button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Card color variants */
+.card-1 {
+  background-color: #ffd9ec; /* pastel pink */
+}
+
+.card-2 {
+  background-color: #e8d9ff; /* lilac */
+}
+
+.card-3 {
+  background-color: #d9ecff; /* sky blue */
+}
