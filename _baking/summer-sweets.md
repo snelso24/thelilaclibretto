@@ -1,9 +1,7 @@
 ---
-title: Summer Sweets
+title: Cozy Cinnamon Rolls
+date: 2025-06-05
 image: /assets/images/cinnamon.jpg
 link: https://example.com/cinnamon
-date: 2025-06-05
 ---
-
-Warm, gooey cinnamon rolls perfect for rainy mornings 🌧️
-
+Delicious soft rolls...
